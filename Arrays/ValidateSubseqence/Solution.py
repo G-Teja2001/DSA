@@ -1,14 +1,13 @@
 arr = [5, 1, 22, 25, 6, -1, 8, 10]
 sequence = [1, 6, -1, 10]
 
-seqIndex = 0
-for item in arr:
-    if seqIndex == len(sequence):
-        break
-    if sequence[seqIndex] == item:
-        seqIndex += 1
+def isValidSubsequence(arr, sequence):
+    seqIndex = 0
+    for value in arr:
+        if seqIndex == len(sequence):
+            break
+        if sequence[seqIndex] == value:
+            seqIndex += 1
+    return seqIndex == len(sequence)
 
-if seqIndex == len(sequence):
-    print(True)
-else:
-    print(False)
+print(isValidSubsequence(arr, sequence))
