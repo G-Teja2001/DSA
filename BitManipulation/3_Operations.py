@@ -45,3 +45,8 @@ print(updateIthBit2(10, 2, 1))
 print(clearLastIthBits(15, 3))
 print(setLastIthBits(8, 2))
 print(clearRangeOfBits(189, 3, 5))
+
+def clearLastSetBit(n):
+    return n & n-1
+
+print(clearLastSetBit(4))
