@@ -50,3 +50,8 @@ def clearLastSetBit(n):
     return n & n-1
 
 print(clearLastSetBit(4))
+
+def setLastUnSetBit(n):
+    return n | n+1
+
+print(setLastUnSetBit(9))
