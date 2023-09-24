@@ -11,7 +11,7 @@ def rotateArrinGroups(arr, k):
 
     for i in range(numLoops):
         start = i * k
-        end = min((i + 1) * k - 1, n - 1)
+        end = min(i + k - 1, n - 1)
         reverse(arr, start, end)
 
 arr = [1,2,3,4,5]
