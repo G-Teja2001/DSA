@@ -4,10 +4,10 @@ num_rows = len(matrix)
 num_cols = len(matrix[0])
 
 start_row = 0
-end_row = num_cols - 1
+end_row = num_rows - 1
 
 start_col = 0
-end_col = num_rows - 1
+end_col = num_cols - 1
 
 while start_row <= end_row and start_col <= end_col:
     # Print the top row
