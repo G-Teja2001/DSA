@@ -1,3 +1,5 @@
+# https://practice.geeksforgeeks.org/problems/check-if-strings-are-rotations-of-each-other-or-not-1587115620/1
+
 # O(n^2, n)
 def approach1(str1, str2):
     if len(str1) != len(str2):

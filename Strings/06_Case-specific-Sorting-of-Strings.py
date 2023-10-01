@@ -1,4 +1,4 @@
-# https://practice.geeksforgeeks.org/problems/case-specific-sorting-of-strings4845/
+# https://practice.geeksforgeeks.org/problems/case-specific-sorting-of-strings4845/1
 
 def fun(string):
     upperCase = []
@@ -14,7 +14,7 @@ def fun(string):
 
     upperCase.sort()
     lowerCase.sort()
-    
+
     lower_index, upper_index = 0, 0
 
     for i in string:
