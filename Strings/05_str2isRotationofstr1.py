@@ -15,3 +15,11 @@ def approach1(str1, str2):
 print(approach1('geeksforgeeks', 'sgeeksforgeek'))
 
 # Can be implemented through kmp algo..
+# But it's very Complex.
+
+def approach2(str1, str2):
+    str1 = str1 + str1
+    if str2 in str1:
+        return True
+    return False
+print(approach2('geeksforgeeks', 'sgeeksforgeek'))
