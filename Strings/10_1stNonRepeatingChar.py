@@ -1,7 +1,24 @@
+# O(n^2) time | O(1) space
 def approach1(string):
+    for idx in range(len(string)):
+        foundDuplicate = False
+        for idx2 in range(len(string)):
+            if string[idx] == string[idx2] and idx != idx2:
+                foundDuplicate = True
+
+        if not foundDuplicate:
+            return idx
+
+    return -1
+
+print(approach1('hh'))
+
+
+# O(n) time | O(1)
+def approach2(string):
     CHAR = 256
     visited = [0] * CHAR
-
+    
     for i in range(len(string) - 1, -1, -1):
         visited[ord(string[i])] += 1
 
@@ -11,10 +28,25 @@ def approach1(string):
 
     return -1
 
-print(approach1('hh'))
+# O(n) time | O(1) space - where n is the length of the input string
+# The constant space is because the input string only has lowercase
+# English-alphabet letters; thus, our hash table will never have more
+# than 26 character frequencies.
 
+def firstNonRepeatingCharacter(string):
+    characterFrequencies = {}
 
-# def approach2(string):
+    for character in string:
+        characterFrequencies[character] = characterFrequencies.get(character, 0) + 1
+    
+    for idx in range(len(string)):
+        character = string[idx]
+        if characterFrequencies[character] == 1:
+            return idx
+
+    return -1
+
+# def approach3(string):
 #     CHAR = 256
 #     visited = [False] * CHAR
 #     res = -1
